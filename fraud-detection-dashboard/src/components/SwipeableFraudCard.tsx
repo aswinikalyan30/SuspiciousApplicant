@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion';
-import { ArrowRight, ArrowLeft, ArrowUp, User, Clock, AlertTriangle, Brain, History } from 'lucide-react';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import type { PanInfo } from 'framer-motion';
+import { ArrowRight, ArrowLeft, ArrowUp, User, Clock, Brain, History } from 'lucide-react';
 import type { FraudCase, AgentType } from '../types';
 import { format } from 'date-fns';
 import { useFraudDetection } from '../context/FraudDetectionContext';
@@ -47,7 +48,7 @@ export function SwipeableFraudCard({
   const rotate = useTransform(x, [-200, 200], [-25, 25]);
   const opacity = useTransform(x, [-200, 0, 200], [0.5, 1, 0.5]);
 
-  const handleDragEnd = (event: any, info: PanInfo) => {
+  const handleDragEnd = (_: any, info: PanInfo) => {
     const threshold = 150;
     
     if (info.offset.x > threshold) {
