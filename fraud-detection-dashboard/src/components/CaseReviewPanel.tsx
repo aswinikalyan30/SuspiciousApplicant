@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUp, RefreshCw, FileText } from 'lucide-react';
 import { SwipeableFraudCard } from './SwipeableFraudCard';
 import { useFraudDetection } from '../context/FraudDetectionContext';
-import { FraudCase } from '../types';
+import type { FraudCase } from '../types';
 
 export function CaseReviewPanel() {
   const { state, approveCase, escalateCase, selectCase } = useFraudDetection();

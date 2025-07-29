@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
-import { FraudCase, NotificationToast, UserSettings, KPIData } from '../types';
+import { createContext, useContext, useReducer, useEffect } from 'react';
+import type { FraudCase, NotificationToast, UserSettings, KPIData } from '../types';
 import { mockFraudCases, mockNotifications, mockUserSettings, mockKPIData } from '../data/mockData';
 
 interface FraudDetectionState {
@@ -95,7 +95,7 @@ function fraudDetectionReducer(
   }
 }
 
-export function FraudDetectionProvider({ children }: { children: ReactNode }) {
+export function FraudDetectionProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(fraudDetectionReducer, initialState);
 
   // Initialize data
