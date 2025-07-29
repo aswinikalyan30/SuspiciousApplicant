@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ArrowUp, RefreshCw, FileText } from 'lucide-react';
 import { SwipeableFraudCard } from './SwipeableFraudCard';
 import { useFraudDetection } from '../context/FraudDetectionContext';
-import type { FraudCase } from '../types';
 
 export function CaseReviewPanel() {
   const { state, approveCase, escalateCase, selectCase } = useFraudDetection();
