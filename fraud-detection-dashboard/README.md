@@ -249,6 +249,47 @@ interface FraudCase {
 - **LMS Activity Monitoring**: Ghost student detection (14+ days inactive)
 - **Document Verification**: Duplicate submissions across applications
 
+## 🚀 Deployment
+
+### Netlify Deployment
+
+This project is configured for easy deployment on Netlify:
+
+1. **Connect Repository**: Link your GitHub/GitLab repository to Netlify
+2. **Build Settings**: Netlify will automatically detect the configuration from `netlify.toml`
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Node.js version: 18
+3. **Deploy**: Click deploy and your site will be live!
+
+#### Manual Deployment
+
+If you prefer manual deployment:
+
+```bash
+# Build the project
+npm run build
+
+# The dist/ folder contains your built application
+# Upload the contents to your hosting provider
+```
+
+#### Environment Variables
+
+Currently, this is a demo application with mock data. For production deployment with real data sources, you may need to configure:
+
+- API endpoints
+- Authentication providers
+- Database connections
+
+### Other Hosting Platforms
+
+The built application (`dist/` folder) can be deployed to any static hosting service:
+- Vercel
+- GitHub Pages
+- AWS S3 + CloudFront
+- Firebase Hosting
+
 ## 🔮 Future Enhancements
 
 - **Case Detail Modal** with full timeline view
