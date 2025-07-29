@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Eye, Clock, User, AlertTriangle, CheckCircle, XCircle, ArrowUpCircle } from 'lucide-react';
-import { FraudCase, AgentType } from '../types';
+import type { FraudCase, AgentType } from '../types';
 import { format } from 'date-fns';
 import { useFraudDetection } from '../context/FraudDetectionContext';
 

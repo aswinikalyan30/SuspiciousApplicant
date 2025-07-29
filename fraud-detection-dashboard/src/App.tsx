@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FraudDetectionProvider } from './context/FraudDetectionContext';
 import { Header } from './components/Header';
 import { Dashboard } from './components/Dashboard';

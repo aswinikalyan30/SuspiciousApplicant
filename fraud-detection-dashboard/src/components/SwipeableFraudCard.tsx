@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion';
 import { ArrowRight, ArrowLeft, ArrowUp, User, Clock, AlertTriangle, Brain, History } from 'lucide-react';
-import { FraudCase, AgentType } from '../types';
+import type { FraudCase, AgentType } from '../types';
 import { format } from 'date-fns';
 import { useFraudDetection } from '../context/FraudDetectionContext';
 
