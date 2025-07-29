@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, X, AlertTriangle, CheckCircle, Info, AlertCircle } from 'lucide-react';
-import { NotificationToast } from '../types';
+import type { NotificationToast } from '../types';
 import { useFraudDetection } from '../context/FraudDetectionContext';
 import { format } from 'date-fns';
 
@@ -56,7 +56,7 @@ export function NotificationSystem() {
   };
 
   // Listen for new notifications and create toasts
-  React.useEffect(() => {
+  useEffect(() => {
     const latestNotification = state.notifications[0];
     if (latestNotification && !latestNotification.read) {
       addToast(latestNotification);

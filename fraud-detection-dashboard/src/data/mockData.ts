@@ -1,4 +1,4 @@
-import { FraudCase, Student, KPIData, NotificationToast, UserSettings, TimelineEvent, FraudFlag, MemoryEcho, PreviousIncident } from '../types';
+import type { FraudCase, Student, KPIData, NotificationToast, UserSettings, TimelineEvent, FraudFlag, MemoryEcho, PreviousIncident } from '../types';
 
 // Mock Students
 export const mockStudents: Student[] = [

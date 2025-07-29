@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Eye, Clock, User, AlertTriangle, CheckCircle, XCircle, ArrowUpCircle } from 'lucide-react';
-import { FraudCase, AgentType } from '../types';
+import type { FraudCase, AgentType } from '../types';
 import { format } from 'date-fns';
-import { useFraudDetection } from '../context/FraudDetectionContext';
 
 interface RecentAlertsTableProps {
   cases: FraudCase[];
@@ -43,7 +42,6 @@ const getAgentColor = (agent: AgentType) => {
 export function RecentAlertsTable({ cases, onCaseSelect }: RecentAlertsTableProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [newCaseIds, setNewCaseIds] = useState<Set<string>>(new Set());
-  const { state } = useFraudDetection();
 
   const filteredCases = cases.filter(fraudCase =>
     fraudCase.student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -73,7 +71,7 @@ export function RecentAlertsTable({ cases, onCaseSelect }: RecentAlertsTableProp
     const recentEvents = timeline.slice(-3);
     return (
       <div className="flex items-center space-x-1">
-        {recentEvents.map((event, index) => (
+                 {recentEvents.map((event) => (
           <div
             key={event.id}
             className={`w-2 h-2 rounded-full ${

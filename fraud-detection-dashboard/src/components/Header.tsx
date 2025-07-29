@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, BarChart3, FileText, Settings, Moon, Sun, Menu, X } from 'lucide-react';
 import { NotificationSystem } from './NotificationSystem';
